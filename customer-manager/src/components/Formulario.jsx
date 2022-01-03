@@ -21,8 +21,25 @@ const Formulario = () => {
                     .typeError('Número no válido'),
     });
 
-    const handleSubmit = (valores) => {
-        console.log(valores);
+    const handleSubmit = async (valores) => {
+        try {
+
+            const url = 'http://localhost:3004/clientes';
+            const rpta = await fetch(url, {
+                method: 'POST',
+                body: JSON.stringify(valores),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+
+            console.log(rpta);
+            const result = await rpta.json();
+            console.log(result);
+
+        } catch (error) {
+            console.log(error);
+        }
     }
     
     return (

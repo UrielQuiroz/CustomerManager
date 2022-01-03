@@ -1,0 +1,12 @@
+{
+  "clientes": [
+    {
+      "nombre": "Uriel Q",
+      "empresa": "TIBS",
+      "email": "uriel.quiroz187@gmail.com",
+      "telefono": "8114968925",
+      "notas": "Hola",
+      "id": 1
+    }
+  ]
+}
