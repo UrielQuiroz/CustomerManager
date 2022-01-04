@@ -7,6 +7,22 @@
       "telefono": "8114968925",
       "notas": "Hola",
       "id": 1
+    },
+    {
+      "nombre": "Kakaroto",
+      "empresa": "Novo",
+      "email": "kakaroto@gmail.com",
+      "telefono": "8114875265",
+      "notas": "KAkarotooooo",
+      "id": 2
+    },
+    {
+      "nombre": "Vegueta",
+      "empresa": "Kame House",
+      "email": "vegueta@gmail.com",
+      "telefono": "8146987532",
+      "notas": "KAkarotooo",
+      "id": 3
     }
   ]
 }
