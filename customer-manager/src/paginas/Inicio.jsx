@@ -1,5 +1,6 @@
-import { useState, useEffect } from "react";
-import Clientes from "../components/Clientes";
+import { useEffect, useState } from "react";
+import Cliente from "../components/Cliente";
+
 
 const Inicio = () => {
 
@@ -9,16 +10,18 @@ const Inicio = () => {
 
         const obtenerClientesApi = async () => {
             try {
+
                 const url = 'http://localhost:3004/clientes';
                 const rpta = await fetch(url);
                 const result = await rpta.json();
                 setClientes(result);
+
             } catch (error) {
                 console.log(error)
             }
         }
 
-        obtenerClientesApi();
+        obtenerClientesApi(); 
 
     }, [])
 
@@ -38,14 +41,11 @@ const Inicio = () => {
                 </thead>
 
                 <tbody>
-                    
                     {clientes.map( cliente => (
-
-                        <Clientes
+                        <Cliente
                             key={cliente.id}
                             cliente={cliente}
                         />
-
                     ))}
                 </tbody>
             </table>
