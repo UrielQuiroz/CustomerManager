@@ -28,18 +28,35 @@ const Formulario = ({cliente, cargando}) => {
     const handleSubmit = async (valores) => {
         try {
 
-            const url = 'http://localhost:3004/clientes';
-            const rpta = await fetch(url, {
-                method: 'POST',
-                body: JSON.stringify(valores),
-                headers: {
-                    'Content-Type': 'application/json'
-                }
-            })
+            let rpta;
 
-            console.log(rpta);
-            const result = await rpta.json();
-            console.log(result);
+            if (cliente.id) {
+                
+                //Editando registro
+                const url = `http://localhost:3004/clientes/${cliente.id}`;
+                rpta = await fetch(url, {
+                    method: 'PUT',
+                    body: JSON.stringify(valores),
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                })
+
+            } else {
+
+                //Nuevo registro
+                const url = 'http://localhost:3004/clientes';
+                rpta = await fetch(url, {
+                    method: 'POST',
+                    body: JSON.stringify(valores),
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                })
+
+            }
+
+            await rpta.json();
             navigate('/clientes')
 
         } catch (error) {

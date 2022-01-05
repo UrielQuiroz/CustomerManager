@@ -5,23 +5,23 @@
       "empresa": "TIBS",
       "email": "uriel.quiroz187@gmail.com",
       "telefono": "8114968925",
-      "notas": "Hola",
+      "notas": "Prueba de registro",
       "id": 1
     },
     {
-      "nombre": "Kakaroto",
+      "nombre": "Juan",
       "empresa": "Novo",
-      "email": "kakaroto@gmail.com",
+      "email": "juan@gmail.com",
       "telefono": "8114875265",
-      "notas": "KAkarotooooo",
+      "notas": "Solicita soporte tecnico",
       "id": 2
     },
     {
-      "nombre": "Vegueta",
-      "empresa": "Kame House",
-      "email": "vegueta@gmail.com",
+      "nombre": "Jose",
+      "empresa": "Ventus",
+      "email": "jose@gmail.com",
       "telefono": "8146987532",
-      "notas": "KAkarotooo",
+      "notas": "Solicita cotización ",
       "id": 3
     }
   ]
