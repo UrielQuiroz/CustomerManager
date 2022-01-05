@@ -39,7 +39,7 @@ const Inicio = () => {
 
                 <tbody>
                     {clientes.map(cliente => (
-                        <Clientes 
+                        <Clientes
                             key={cliente.id}
                             cliente={cliente}
                         />
