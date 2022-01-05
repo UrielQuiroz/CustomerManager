@@ -38,11 +38,14 @@ const Inicio = () => {
                 </thead>
 
                 <tbody>
-                    {clientes.map(cliente => (
+                    
+                    {clientes.map( cliente => (
+
                         <Clientes
                             key={cliente.id}
                             cliente={cliente}
                         />
+
                     ))}
                 </tbody>
             </table>
