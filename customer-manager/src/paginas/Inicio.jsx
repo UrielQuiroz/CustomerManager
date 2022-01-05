@@ -4,7 +4,9 @@ import Cliente from "../components/Cliente";
 
 const Inicio = () => {
 
-    const [clientes, setClientes] = useState({})
+    const [clientes, setClientes] = useState([])
+
+    console.log(clientes);
 
     useEffect(() => {
 
