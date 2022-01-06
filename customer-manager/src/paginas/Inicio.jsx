@@ -6,8 +6,6 @@ const Inicio = () => {
 
     const [clientes, setClientes] = useState([])
 
-    console.log(clientes);
-
     useEffect(() => {
 
         const obtenerClientesApi = async () => {
@@ -26,6 +24,26 @@ const Inicio = () => {
         obtenerClientesApi(); 
 
     }, [])
+
+
+    const handleEliminar = async id => {
+        const confirm =  window.confirm('Desea eliminar el registro?');
+        if (confirm) {
+            try {
+                const url = `http://localhost:3004/clientes/${id}`;
+                const rpta = await fetch(url, {
+                    method: 'DELETE'
+                })
+                await rpta.json();
+
+                const arrayClientes = clientes.filter( cliente => cliente.id !== id);
+                setClientes(arrayClientes);
+
+            } catch (error) {
+                console.log(error);
+            }
+        }
+    }
 
     return (
         <>
@@ -47,6 +65,7 @@ const Inicio = () => {
                         <Cliente
                             key={cliente.id}
                             cliente={cliente}
+                            handleEliminar={handleEliminar}
                         />
                     ))}
                 </tbody>

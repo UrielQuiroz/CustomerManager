@@ -12,17 +12,25 @@
       "nombre": "Juan",
       "empresa": "Novo",
       "email": "juan@gmail.com",
-      "telefono": "8114875265",
-      "notas": "Solicita soporte tecnico",
+      "telefono": "8156975264",
+      "notas": "Solicita una aplicacion web",
       "id": 2
     },
     {
-      "nombre": "Jose",
+      "nombre": "Pedro ",
       "empresa": "Ventus",
-      "email": "jose@gmail.com",
-      "telefono": "8146987532",
-      "notas": "Solicita cotización ",
+      "email": "pedro@gmail.com",
+      "telefono": "8156497562",
+      "notas": "Solicita una pagina web comercial",
       "id": 3
+    },
+    {
+      "nombre": "Maria",
+      "empresa": "COSMOCEL",
+      "email": "maria@cosmocel.com",
+      "telefono": "8146853297",
+      "notas": "Solicita una app movil",
+      "id": 4
     }
   ]
 }
